@@ -1,0 +1,61 @@
+@import 'styles/constants.scss';
+
+.custom-selector {
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size;
+
+  .custom-selector-input {
+    display: flex;
+    align-items: center;
+
+    .custom-input {
+      flex: 1;
+    }
+    .clear-btn {
+      margin-left: -$size-xl;
+      width: $size-xl;
+      opacity: 0;
+      border: 0;
+      background-color: transparent;
+      transition: linear all $transition-normal;
+      color: $text-color;
+    }
+    .clear-btn.visible {
+      opacity: 1;
+    }
+  }
+
+  .custom-selector-options {
+    position: absolute;
+    max-height: 0px;
+    width: 100%;
+    background-color: $white-background;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    transition: linear all $transition-normal;
+
+    .custom-selector-option {
+      border-bottom: 1px solid #e8e8e8;
+      width: 100%;
+      text-align: left;
+
+      > p {
+        padding: 0 $size-md;
+      }
+    }
+  }
+  .custom-selector-options.visible {
+    max-height: 200px;
+    overflow: auto;
+    border-radius: 0 0 $size-sm $size-sm;
+  }
+}
+.custom-selector.disabled {
+  opacity: 0.5;
+  * {
+    cursor: no-drop;
+  }
+}

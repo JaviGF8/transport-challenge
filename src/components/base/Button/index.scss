@@ -1,0 +1,16 @@
+@import 'styles/constants.scss';
+
+.custom-btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size;
+  font-weight: 900;
+  height: 40px;
+  border-radius: $border-radius-sm;
+  background: $btn-background;
+  border: 0;
+  color: white;
+  transition: linear opacity $transition-fast;
+}
+.custom-btn:disabled {
+  opacity: 0.5;
+}

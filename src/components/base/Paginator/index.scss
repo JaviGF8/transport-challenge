@@ -1,0 +1,27 @@
+@import 'styles/constants.scss';
+
+.custom-paginator {
+  display: flex;
+  margin: $size-lg 0;
+
+  .custom-btn:first-child {
+    margin-left: 0;
+  }
+  .custom-btn {
+    padding: $size-sm $size-lg;
+    margin: 0 $size-sm;
+  }
+  .custom-btn:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .custom-paginator {
+    .btn {
+      margin: 0 $size-sm;
+      font-size: $font-size;
+      padding: $size-md;
+    }
+  }
+}
